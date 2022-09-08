@@ -39,8 +39,8 @@ dokku storage:mount your-dokku-app /var/lib/dokku/data/storage/your-dokku-app:/v
 
 ```
 dokku config:set --global DOKKU_LETSENCRYPT_EMAIL=your@email.tld
-dokku letsencrypt your-dokku-app
-dokku letsencrypt:cron-job --add
+dokku letsencrypt:enable your-dokku-app
+dokku letsencrypt:cron-job --add your-dokku-app
 ```
 
 6. After deployment, point your browser to your application's URL and configure nextcloud using the postgres option and your credentials from step 1.
